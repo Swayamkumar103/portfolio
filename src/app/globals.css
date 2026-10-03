@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --paper: #f7f7f2;
+  --paper-deep: #efefe8;
+  --panel: #f1f2eb;
+  --ink: #202821;
+  --secondary: #202821;
+  --muted: #354038;
+  --subtle: #4b554d;
+  --line: #dedfd6;
+  --line-soft: #d9dacf;
+  --green: #426b55;
+  --green-dark: #304d3d;
+  --green-hover: #243a2e;
+  --button: #ffffff;
+  --code-ink: #364138;
+  --code-green: #587660;
+  --code-amber: #a56d48;
+  --code-muted: #536053;
+  --selection: #dce7dc;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #151b17;
+  --paper-deep: #1c241e;
+  --panel: #202a22;
+  --ink: #e5e9e2;
+  --secondary: #e5e9e2;
+  --muted: #ccd4ca;
+  --subtle: #aeb8ad;
+  --line: #303b32;
+  --line-soft: #313c33;
+  --green: #a0c0a5;
+  --green-dark: #75997d;
+  --green-hover: #64856c;
+  --button: #151b17;
+  --code-ink: #d5ddd4;
+  --code-green: #a0c0a5;
+  --code-amber: #d8a681;
+  --code-muted: #aeb8ad;
+  --selection: #35483a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-green: var(--green);
+  --color-green-dark: var(--green-dark);
+  --color-green-hover: var(--green-hover);
+  --color-button: var(--button);
+  --color-code-ink: var(--code-ink);
+  --color-code-green: var(--code-green);
+  --color-code-amber: var(--code-amber);
+  --color-code-muted: var(--code-muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--selection);
+  color: var(--ink);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
