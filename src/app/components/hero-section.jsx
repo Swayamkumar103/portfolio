@@ -73,7 +73,7 @@ export default function HeroSection({ profile }) {
             {profile.name}
             <span className="text-green">.</span>
           </h1>
-          <p className="mt-[17px] text-[21px] font-normal tracking-[-0.045em] text-green-dark md:mt-[22px] md:text-[25px]">
+          <p className="animate-typing mt-[17px] w-fit overflow-hidden whitespace-nowrap border-r-2 border-green pr-1 text-[21px] font-normal tracking-[-0.045em] text-green-dark md:mt-[22px] md:text-[25px] typing">
             {profile.role}
           </p>
           <p className="mt-5 max-w-[430px] text-sm leading-[1.85] text-secondary md:text-[15px]">

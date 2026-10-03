@@ -72,6 +72,7 @@ export const projects = [
       "REST APIs backed by MongoDB",
     ],
     stack: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "MongoDB"],
+    github: "https://github.com/Swayamkumar103/ServiceBasePlatform",
   },
   {
     number: "02",
@@ -85,6 +86,7 @@ export const projects = [
       "Weekly progress visualization",
     ],
     stack: ["Next.js", "React", "JavaScript", "Tailwind CSS"],
+    github: "https://github.com/Swayamkumar103/Nutrila",
   },
   {
     number: "03",
@@ -98,5 +100,6 @@ export const projects = [
       "Simple mobile interface",
     ],
     stack: ["Kotlin", "Android", "Firebase"],
+    github: "https://github.com/Swayamkumar103/ExpTrack",
   },
 ];

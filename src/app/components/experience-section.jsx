@@ -8,7 +8,7 @@ export default function ExperienceSection() {
     >
       <PageWidth>
         <SectionHeading number="04">Experience &amp; education</SectionHeading>
-        <div className="ml-12 mt-[35px] grid grid-cols-1 gap-[27px] md:ml-[4.5rem] md:mt-[50px] md:grid-cols-[1fr_1.35fr] md:gap-[36px]">
+        <div className="ml-12 mt-[35px] grid grid-cols-1 gap-[27px] md:ml-[4.5rem] md:mt-[50px] md:grid-cols-[1fr_1.35fr] md:gap-9">
           <p className="m-0 max-w-[270px] text-[22px] font-normal leading-[1.45] tracking-[-0.05em] md:text-2xl">
             The things I&apos;ve learned along the way.
           </p>

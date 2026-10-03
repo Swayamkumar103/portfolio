@@ -64,6 +64,22 @@
   --color-code-muted: var(--code-muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --animate-typing: typing 3s steps(20, end) infinite, caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
 }
 
 * {
@@ -100,5 +116,10 @@ button:focus-visible {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .animate-typing {
+    max-width: none;
+    animation: none;
   }
 }

@@ -16,9 +16,24 @@ function ProjectCard({ project }) {
               {project.name}
             </h3>
           </div>
-          <span className="grid h-[34px] w-[34px] shrink-0 place-items-center border border-line text-[15px] text-green transition-colors hover:bg-green-dark hover:text-button">
-            ↗
-          </span>
+          {project.github ? (
+            <a
+              className="grid h-[34px] w-[34px] shrink-0 place-items-center border border-line text-[15px] text-green transition-colors hover:bg-green-dark hover:text-button"
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Open ${project.name} on GitHub`}
+            >
+              ↗
+            </a>
+          ) : (
+            <span
+              className="grid h-[34px] w-[34px] shrink-0 place-items-center border border-line text-[15px] text-green"
+              aria-hidden="true"
+            >
+              ↗
+            </span>
+          )}
         </div>
         <p className="mt-4 max-w-[600px] text-[13px] leading-[1.8] text-secondary">
           {project.description}
@@ -56,8 +71,30 @@ function ProjectCard({ project }) {
           </div>
         </div>
         <div className="mt-[22px] flex flex-wrap gap-[18px] font-mono text-[9px] uppercase text-muted">
-          <span>GitHub URL to add</span>
-          <span>Demo URL to add</span>
+          {project.github ? (
+            <a
+              className="transition-colors hover:text-green-dark"
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              View on GitHub ↗
+            </a>
+          ) : (
+            <span>GitHub URL to add</span>
+          )}
+          {project.demo ? (
+            <a
+              className="transition-colors hover:text-green-dark"
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live demo ↗
+            </a>
+          ) : (
+            <span>Demo URL to add</span>
+          )}
         </div>
       </div>
     </article>
